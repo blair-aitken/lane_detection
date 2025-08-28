@@ -77,7 +77,16 @@ pip3 --version
 
 #### For Windows:
 - Go to the official [Python Downloads page](https://www.python.org/downloads/windows/).
-- -Download the latest stable release (Python 3.9+).
+- Download the latest stable release (Python 3.9+).
+- Run the installer
+ - During installation, check the box that says `Add Python to PATH`.
+ - Choose “Install Now.”
+- Verify installation
+ - Open Command Prompt (search cmd in Start) and run:
+   ```bash
+   python --version
+   pip --version
+   ```
 
 
 
