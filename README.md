@@ -124,15 +124,15 @@ When you run the launcher, the following steps will run in sequence:
 #### Step 2: Camera Calibration
 - Every camera has its own intrinsic properties (focal length, distortion coefficients, etc.).  
 - To account for this, you must run **camera calibration** using the provided `chessboard.png` (A4 print).  
-- Input: short video of the chessboard pattern taken with the same camera setup used for driving.  
+- Input: At least 10 photos of the chessboard pattern at different distances/angles taken with the same camera setup used for driving.  
 - Output: `data/calib/camera_intrinsics.npz` containing `camera_matrix` and `dist_coeffs`  
 - This file is unique to each camera and only needs to be created once per setup.
 
-<img src="https://github.com/user-attachments/assets/2e17f799-9dd7-47ab-8848-026a1ae3d2f1" width="500">
+<img src="https://github.com/user-attachments/assets/01599bea-576f-4e40-acdd-e667ff1c1d80" width="500">
 
 A `camera_intrinsics_summary.json` file is also created, which provides a simple summary of your calibration, including the number of images used, image size, and RMS error.
 
-<img src="https://github.com/user-attachments/assets/13fa979f-a027-449d-a4fd-f2f680667d69" width="500"><br>
+<img src="https://github.com/user-attachments/assets/4bcce1f5-a0e3-4e31-850d-7046b59caafa" width="500"><br>
 
 #### Step 3: Compute Homography Matrix
 - Next, you’ll map image pixels to real-world coordinates using the provided **B1 calibration boards** (print two copies of `calibration_board_B1.png`).  
@@ -140,7 +140,7 @@ A `camera_intrinsics_summary.json` file is also created, which provides a simple
 - The script will show the first frame and prompt you to click the 4 corners of the calibration board, **starting with the top-left corner, moving clockwise.**  
 - A homography matrix is computed and saved as `data/homography/[video_name]_homography.json`
 
-<img src="https://github.com/user-attachments/assets/72be4be4-470f-4617-b1b1-92341bb8eacd" width="500">
+<img src="https://github.com/user-attachments/assets/7578e7fe-4c09-4fa0-8b86-8d2f461ecf7b" width="500">
 
 To confirm the homography transformation worked, a **sanity check** is built into the homography step:
 
@@ -186,7 +186,7 @@ After running the full pipeline, two types of outputs are created:
 
 At the end of processing, the script also prints **summary statistics**.
 
-<img src="https://github.com/user-attachments/assets/262b4a23-dfab-40d3-85bd-696ae64afbdc" width="500">
+<img src="https://github.com/user-attachments/assets/eaeb7bb7-ed0f-44f4-b937-7fb5e7468c87" width="500">
 
 ---
 
