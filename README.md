@@ -49,7 +49,7 @@ project-root/
 
 #### Option 1: Clone with Git
 ```bash
-git clone https://github.com/yourusername/lane-measurement.git
+git clone https://github.com/blair-aitken/lane_detection.git
 cd lane-measurement
 ```
 
