@@ -125,9 +125,9 @@ When you run the launcher, the following steps will run in sequence:
 - Every camera has its own intrinsic properties (focal length, distortion coefficients, etc.).  
 - To account for this, you must run **camera calibration** using the provided `chessboard.png` (A4 print).  
 - **Input:**
-  - At least 10 images (.jpg, .jpeg, .png, .bmp, .tif or .tiff) of the chessboard pattern at different distances/angles taken with the same camera setup used for driving.
+  - At least 10 images of the chessboard pattern at different distances/angles taken with the same camera setup used for driving.
   - Save these images in the `data/chessboard_images` folder.
-  - Accepted formats: `*.jpg`, `*.jpeg`, `*.png`, `*.bmp`, `*.tif`, `*.tiff` 
+  - Will accept `*.jpg`, `*.jpeg`, `*.png`, `*.bmp`, `*.tif`, `*.tiff` formats only.
 - **Output:**
   - `data/calib/camera_intrinsics.npz` containing `camera_matrix` and `dist_coeffs`  
   - This file is unique to each camera and only needs to be created once per setup.
@@ -161,7 +161,9 @@ You will be asked each time whether you want to create a new homography matrix f
 
 #### Step 4: Lane Measurement
 - With calibration and homography set, you can now measure lane position from a driving video.  
-- Input: wheel-view driving video.  
+- **Input:**
+  - Wheel-view driving video.
+  - Save this video in the `data/videos` folder.
 - You’ll be prompted to click on the wheel reference point once.  
 - For each frame:
   - Lane line is detected using a histogram-based method.  
