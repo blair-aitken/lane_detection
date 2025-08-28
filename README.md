@@ -69,11 +69,15 @@ This project also requires **Python 3.9+**.  If you don’t already have Python 
 ```bash
 brew install python
 ```
-- Verify installation
+- Verify installation:
 ```bash
 python3 --version
 pip3 --version
 ```
+
+#### For Windows:
+- Go to the official [Python Downloads page](https://www.python.org/downloads/windows/).
+- -Download the latest stable release (Python 3.9+).
 
 
 
