@@ -142,7 +142,7 @@ Open a terminal in the project folder, make the launcher executable (first time 
 
 ```bash
 chmod +x mac_launcher.sh
-./mac_launcher.sh
+.launchers/mac_launcher.sh
  ```
 
 **Windows**
@@ -150,7 +150,7 @@ chmod +x mac_launcher.sh
 Simply double-click win_launcher.bat in File Explorer,
 or run it from Command Prompt / PowerShell:
 ```bat
-win_launcher.bat
+launchers/win_launcher.bat
 ```
 
 When you run the launcher, the following steps will run in sequence:
