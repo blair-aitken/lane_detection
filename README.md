@@ -36,7 +36,7 @@ project-root/
 │   ├── config.py                  # Loads config.json and exposes constants (thresholds, kernels, offsets, etc.)
 │   ├── homography.py              # Compute/validate/save 3×3 homography mapping (image → road plane)
 │   ├── measurement.py             # Pixel → world coordinate mapping + distance calculations
-│   └── utils.py
+│   └── utils.py                   # Misc. shared helpers (paths, dialogs, overlays)
 │
 ├── scripts/
 │   ├── run_calibration.py         # Intrinsic calibration
