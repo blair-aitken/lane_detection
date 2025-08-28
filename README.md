@@ -62,28 +62,31 @@ This project also requires **Python 3.9+**.  If you don’t already have Python 
 
 #### For macOS:
 - Install Homebrew (package manager for macOS) if you don’t already have it:
+ 
  ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 - Install Python:
+
 ```bash
 brew install python
 ```
 - Verify installation:
+
 ```bash
 python3 --version
 pip3 --version
 ```
 
 #### For Windows:
-- Go to the official [Python Downloads page](https://www.python.org/downloads/windows/).
-- Download the latest stable release (Python 3.9+).
+- Go to the official [Python Downloads page](https://www.python.org/downloads/windows/) and download the latest stable release (Python 3.9+).
 - Run the installer
- - During installation, check the box that says `Add Python to PATH`.
- - Choose “Install Now.”
+  - During installation, check the box that says `Add Python to PATH`.
+  - Choose “Install Now.”
 - Verify installation
- - Open Command Prompt (search cmd in Start) and run:
-   ```bash
+  - Open Command Prompt (search cmd in Start) and run:
+
+  ```bat
    python --version
    pip --version
    ```
