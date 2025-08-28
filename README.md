@@ -31,11 +31,17 @@ project-root/
 │   ├── csv/                       # Measurement CSVs (per frame)
 │   ├── videos/                    # Debug videos
 │
+├── src/
+│   ├── calibration.py             # Camera intrinsic calibration from chessboard images → saves camera_intrinsics.npz
+│   ├── config.py                  # Loads config.json and exposes constants (thresholds, kernels, offsets, etc.)
+│   ├── homography.py              # Compute/validate/save 3×3 homography mapping (image → road plane)
+│   ├── measurement.py             # Pixel → world coordinate mapping + distance calculations
+│   └── utils.py
+│
 ├── scripts/
 │   ├── run_calibration.py         # Intrinsic calibration
 │   ├── run_homography.py          # Homography matrix generation
-│   ├── run_measurement.py         # Lane measurement
-│   └── utils/                     # Helper functions
+│   └── run_measurement.py         # Lane measurement
 │
 │── launchers/
 │   ├── mac_launcher.sh            # macOS/Linux launcher
