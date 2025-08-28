@@ -203,7 +203,7 @@ You will be asked each time whether you want to create a new homography matrix f
  
 ---
 
-## Outputs
+### Outputs
 
 After running the full pipeline, two types of outputs are created:
 
@@ -228,7 +228,7 @@ At the end of processing, the script also prints **summary statistics**.
 
 ---
 
-## Troubleshooting
+### Troubleshooting
 
 **Common issues:**
 
@@ -249,5 +249,5 @@ At the end of processing, the script also prints **summary statistics**.
 
 ---
 
-## License
+### License
 This project is open source and available under the [MIT License](LICENSE).
