@@ -58,10 +58,9 @@ cd lane-measurement
 2. Extract the downloaded ZIP file
 3. Navigate to the extracted folder in your terminal (macOS/Linux) or Command Prompt (Windows)
 
-This project also requires **Python 3.9+**.  
-If you don’t already have Python installed, follow the instructions below.
+This project also requires **Python 3.9+**.  If you don’t already have Python installed, follow the instructions below.
 
-#### macOS
+#### For macOS:
 
 **Check if Python is already installed**  
 Open **Terminal** (search *Terminal* in Spotlight) and run:  
