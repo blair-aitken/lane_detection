@@ -124,11 +124,11 @@ When you run the launcher, the following steps will run in sequence:
 #### Step 2: Camera Calibration
 - Every camera has its own intrinsic properties (focal length, distortion coefficients, etc.).  
 - To account for this, you must run **camera calibration** using the provided `chessboard.png` (A4 print).  
-- Input:
+- **Input:**
   - At least 10 photos of the chessboard pattern at different distances/angles taken with the same camera setup used for driving.
+  - Place these images in the `data/chessboard_images` folder.
   - Accepted formats: `*.jpg`, `*.jpeg`, `*.png`, `*.bmp`, `*.tif`, `*.tiff` 
-- Place these images in the `data/chessboard_images` folder.
-- Output:  
+- **Output:**
   - `data/calib/camera_intrinsics.npz` containing `camera_matrix` and `dist_coeffs`  
   - This file is unique to each camera and only needs to be created once per setup.
 
