@@ -25,6 +25,7 @@ project-root/
 ├── data/
 │   ├── calib/                     # Calibration files (.npz with camera intrinsics)
 │   ├── homography/                # Homography JSON files
+│   ├── chessboard_images/         # Input chessboard images for computing camera instrinsics
 │   └── videos/                    # Input calibration + driving videos
 │
 ├── output/
