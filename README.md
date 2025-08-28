@@ -141,8 +141,9 @@ Run the launcher for your operating system:
 Open a terminal in the project folder, make the launcher executable (first time only), then run:
 
 ```bash
+cd /launchers
 chmod +x mac_launcher.sh
-.launchers/mac_launcher.sh
+./mac_launcher.sh
  ```
 
 **Windows**
