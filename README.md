@@ -25,11 +25,11 @@ project-root/
 ├── data/
 │   ├── calib/                     # Calibration files (.npz with camera intrinsics)
 │   ├── homography/                # Homography JSON files
-│   ├── videos/                    # Input calibration + driving videos
+│   └── videos/                    # Input calibration + driving videos
 │
 ├── output/
 │   ├── csv/                       # Measurement CSVs (per frame)
-│   ├── videos/                    # Debug videos
+│   └── videos/                    # Debug videos
 │
 ├── src/
 │   ├── calibration.py             # Camera intrinsic calibration from chessboard images → saves camera_intrinsics.npz
@@ -45,7 +45,7 @@ project-root/
 │
 │── launchers/
 │   ├── mac_launcher.sh            # macOS/Linux launcher
-│   ├── win_launcher.bat           # Windows launcher
+│   └── win_launcher.bat           # Windows launcher
 │ 
 ├── requirements.txt               # Python dependencies
 └── README.md                      # This document
