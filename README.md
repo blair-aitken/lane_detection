@@ -54,7 +54,7 @@ cd lane_detection
 ```
 
 #### Option 2: Download ZIP
-1. Download the latest release
+1. Download the latest release [here](https://github.com/blair-aitken/lane_detection/archive/refs/heads/main.zip)
 2. Extract the downloaded ZIP file
 3. Navigate to the extracted folder in your terminal (macOS/Linux) or Command Prompt (Windows)
 
