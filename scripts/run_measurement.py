@@ -141,7 +141,7 @@ def main():
         if event == cv2.EVENT_LBUTTONDOWN:
             wheel["x"], wheel["y"], wheel["set"] = x, y, True
 
-    win_title = "Click wheel reference point (ESC to cancel)"
+    win_title = "Click reference point (ESC to cancel)"
     cv2.imshow(win_title, first_frame)
     cv2.setMouseCallback(win_title, on_mouse)
     while True:
