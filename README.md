@@ -64,7 +64,6 @@ cd lane-measurement
 This project comes with a default configuration file in the repository root called `config.jason`. 
 
 ```json
-  "lane_point_mode": "centre",
   "wheel_offset_cm": 91.7,
   "column_width": 5,
   "min_lane_width": 15,
@@ -92,6 +91,7 @@ You may edit values if you want to tune performance (e.g., for different cameras
 | `min_aspect_ratio` | Height:width filter — keeps long, thin shapes typical of lane paint. Typical range: **2–10** (default = 5.0). |
 | `morph_kernel` | Structuring element size `[width, height]` used for morphological close/open operations to clean thresholded image. Default = `[10,15]`. |
 
+---
 
 ### How It Works
 
