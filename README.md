@@ -125,8 +125,8 @@ When you run the launcher, the following steps will run in sequence:
 - Every camera has its own intrinsic properties (focal length, distortion coefficients, etc.).  
 - To account for this, you must run **camera calibration** using the provided `chessboard.png` (A4 print).  
 - **Input:**
-  - At least 10 photos of the chessboard pattern at different distances/angles taken with the same camera setup used for driving.
-  - Place these images in the `data/chessboard_images` folder.
+  - At least 10 images (.jpg, .jpeg, .png, .bmp, .tif or .tiff) of the chessboard pattern at different distances/angles taken with the same camera setup used for driving.
+  - Save these images in the `data/chessboard_images` folder.
   - Accepted formats: `*.jpg`, `*.jpeg`, `*.png`, `*.bmp`, `*.tif`, `*.tiff` 
 - **Output:**
   - `data/calib/camera_intrinsics.npz` containing `camera_matrix` and `dist_coeffs`  
@@ -140,7 +140,7 @@ A `camera_intrinsics_summary.json` file is also created, which provides a simple
 
 #### Step 3: Compute Homography Matrix
 - Next, you’ll map image pixels to real-world coordinates using the provided **B1 calibration boards** (print two copies of `calibration_board_B1.png`).  
-- Record a short video of the boards placed flat on the road surface with the short side against the wheel of the vehicle.  
+- Record a short video of the boards placed flat on the road surface with the short side against the wheel of the vehicle and save it in the `data/videos` folder.
 - The script will show the first frame and prompt you to click the 4 corners of the calibration board, **starting with the top-left corner, moving clockwise.**  
 - A homography matrix is computed and saved as `data/homography/[video_name]_homography.json`
 
