@@ -50,7 +50,7 @@ project-root/
 #### Option 1: Clone with Git
 ```bash
 git clone https://github.com/blair-aitken/lane_detection.git
-cd lane-detection
+cd lane_detection
 ```
 
 #### Option 2: Download ZIP
