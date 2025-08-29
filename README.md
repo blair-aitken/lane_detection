@@ -63,12 +63,14 @@ git clone https://github.com/blair-aitken/lane_detection.git
 cd lane_detection
 ```
 
-#### Option 2: Download ZIP
+**Option B: Download ZIP**
 1. Download the latest release [here](https://github.com/blair-aitken/lane_detection/archive/refs/heads/main.zip)
 2. Extract the downloaded ZIP file
 3. Navigate to the extracted folder in your terminal (macOS/Linux) or Command Prompt (Windows)
 
-This project also requires **Python 3.9+**.  If you don’t already have Python installed, follow the instructions below.
+#### 2. Install Python
+
+If you don't have Python 3.9+ installed, follow these instructions.
 
 #### For macOS:
 - Install Homebrew (package manager for macOS) if you don’t already have it:
