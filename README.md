@@ -57,7 +57,7 @@ project-root/
 ### Installation
 
 #### 1. Get the code
-#### Option A: Clone with Git
+**Option A: Clone with Git**
 ```bash
 git clone https://github.com/blair-aitken/lane_detection.git
 cd lane_detection
