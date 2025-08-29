@@ -1,15 +1,17 @@
 ## Title here
 
-This repository accompanies the research paper (add paper citation here).
+This repository accompanies the research paper:
 
-This toolkit provides everything needed to:
-- Calibrate your camera using intrinsic parameters.
-- Generate a homography matrix to map image pixels into road-plane coordinates.
-- Measure vehicle lateral position relative to a lane line from wheel-view videos.
+(add paper citation here)
+
+This toolkit provides a complete pipeline to:
+- Calibrate camera intrinsic parameters.
+- Generate a homography matrix to map image pixels to real-world road-plane coordinates.
+- Measure a vehicle's lateral position relative to a lane line.
 
 Included in this repository:
-- `chessboard_A4.png` — print on **A4** for camera calibration.  
-- `calibration_board_B1.png` — print **two copies** on **B1-sized boards** for homography calibration.  
+- `chessboard_A4.png` — Print on **A4** for camera calibration.  
+- `calibration_board_B1.png` — Print **two copies** on **B1-sized boards** for homography calibration.  
 - Cross-platform launchers (`mac_launcher.sh`, `win_launcher.bat`) to automate the entire pipeline.
 
 ---
@@ -54,7 +56,8 @@ project-root/
 
 ### Installation
 
-#### Option 1: Clone with Git
+#### 1. Get the code
+#### Option A: Clone with Git
 ```bash
 git clone https://github.com/blair-aitken/lane_detection.git
 cd lane_detection
