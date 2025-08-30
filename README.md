@@ -117,13 +117,13 @@ Before you can measure lane position, there are two short setup steps:
 
 Every camera bends the image a little (distortion). Calibration removes this so measurements are accurate.
 
-- Print `chessboard_A4.png` on A4 paper.
-- Mount flat on stiff cardboard or foam board (no bending).
-- Take 10–15 photos with your camera:
+1. Print `chessboard_A4.png` on A4 paper.
+2. Mount flat on stiff cardboard or foam board (no bending).
+3. Take 10–15 photos with your camera:
   - Move the board around the frame (corners, center, edges).
   - Tilt it at different angles.
   - Vary the distance (near/far).
--Save the photos into `data/chessboard_images/`
+4. Save the photos into `data/chessboard_images/`
 
 Do this once per camera setup. If you change the camera, lens, or resolution, recalibrate.
 
@@ -131,11 +131,11 @@ Do this once per camera setup. If you change the camera, lens, or resolution, re
 
 This step tells the software how to convert from video pixels into real-world distances (cm/meters).
 
-- Print two copies of `calibration_board_B1.png` on **B1-sized boards.**
-- Park your car on a flat road or, ideally, the same test track you’ll use for driving.
-- Place both boards flat on the ground beside the wheel you’re measuring from (short side against the tyre).
-- Record a 5 second video of the boards with your mounted camera.
-- Save the video into `data/videos/`
+1. Print two copies of `calibration_board_B1.png` on **B1-sized boards.**
+2. Park your car on a flat road or, ideally, the same test track you’ll use for driving.
+3. Place both boards flat on the ground beside the wheel you’re measuring from (short side against the tyre).
+4. Record a 5 second video of the boards with your mounted camera.
+5. Save the video into `data/videos/`
 
 Do this once per camera mounting position. If you move or tilt the camera, you’ll need a new homography.
 
@@ -143,9 +143,9 @@ Do this once per camera mounting position. If you move or tilt the camera, you�
 
 This is the video the system will analyse for lane position.
 
-- Mount the camera securely above the wheel so the lane line is clearly visible.
-- Record your driving video.
-- Save it into `data/videos/`
+1. Mount the camera securely above the wheel so the lane line is clearly visible.
+2. Record your driving video.
+3. Save it into `data/videos/`
   
 ---
 
