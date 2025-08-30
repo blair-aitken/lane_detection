@@ -119,11 +119,8 @@ Every camera bends the image a little (distortion). Calibration removes this so 
 
 1. Print `chessboard_A4.png` on A4 paper.
 2. Mount flat on stiff cardboard or foam board (no bending).
-3. Take 10–15 photos with your camera:
-  - Move the board around the frame (corners, center, edges).
-  - Tilt it at different angles.
-  - Vary the distance (near/far).
-4. Save the photos into `data/chessboard_images/`
+3. Take 10–15 photos with your camera. Move the board around the frame, tilt it at different angles, and vary the distance.
+5. Save the photos into `data/chessboard_images/`
 
 Do this once per camera setup. If you change the camera, lens, or resolution, recalibrate.
 
