@@ -110,8 +110,8 @@ pip --version
 
 Before you can measure lane position, there are two short setup steps:
 
-	1.	Calibrate the camera (to remove lens distortion).
-	2.	Generate a homography (to convert video pixels into real-world road distances).
+1. Calibrate the camera (to remove lens distortion).
+2. Generate a homography (to convert video pixels into real-world road distances).
 
 #### Calibrate Your Camera
 
