@@ -16,6 +16,15 @@ Included in this repository:
 
 ---
 
+### Quick Start (TL;DR)
+1. Print `chessboard_A4.png` → take 10–15 photos → save to `data/chessboard_images/`.
+2. Print 2 × `calibration_board_B1.png` → record 5–10s homography video → save to `data/videos/`.
+3. Record driving video with same camera mount → save to `data/videos/`.
+4. Run the launcher (`mac_launcher.sh` or `win_launcher.bat`).
+5. Collect outputs from `output/csv/` (for analysis) and `output/videos/` (for checking).
+
+---
+
 ### Folder Structure
 
 ```
