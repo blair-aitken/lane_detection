@@ -156,7 +156,7 @@ What to do:
 
 This project comes with a configuration file in the repository root called `config.json`
 
-The only setting you need to change is wheel_offset_cm, because every vehicle has a different width.
+The only setting you need to change is `wheel_offset_cm`, because every vehicle has a different width.
 - To calculate this value, measure the total width of your vehicle (outside wheel to outside wheel), then divide by 2.
 - Enter this distance (in centimetres).
 - The software uses this to convert the wheel-to-lane measurement into a centre-of-vehicle-to-lane measurement.
