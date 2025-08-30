@@ -153,7 +153,27 @@ What to do:
 ---
 
 ### Configuration
-This project comes with a default configuration file in the repository root called `config.jason`. 
+
+This project comes with a configuration file in the repository root called `config.json`
+
+The only setting you need to change is wheel_offset_cm, because every vehicle has a different width.
+- To calculate this value, measure the total width of your vehicle (outside wheel to outside wheel), then divide by 2.
+- Enter this distance (in centimetres).
+- The software uses this to convert the wheel-to-lane measurement into a centre-of-vehicle-to-lane measurement.
+
+All other settings can be left as they are unless you want to fine-tune detection performance.
+
+```json
+  "wheel_offset_cm": 91.7,
+  "column_width": 5,
+  "min_lane_width": 15,
+  "max_jump": 30,
+  "gaussian_kernel": [15, 15],
+  "block_size": 25,
+  "c_const": -8,
+  "min_contour_area": 150,
+  "min_aspect_ratio": 5.0,
+  "morph_kernel": [10, 15]
 
 ```json
   "wheel_offset_cm": 91.7,
