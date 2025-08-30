@@ -180,15 +180,15 @@ You may edit values if you want to tune performance (e.g., for different cameras
 
 | Variable | Description |
 | --- | --- |
-| `wheel_offset_cm` | Half the vehicle’s wheel-to-wheel track width. Used to convert wheel→lane distance into lane-centre distance. |
+| `wheel_offset_cm` | Half the vehicle’s wheel-to-wheel track width. |
 | `column_width` | Half-width of vertical search strip around the wheel x-coordinate for histogram peak finding. |
-| `min_lane_width` | Rejects contours narrower than this. Typical range: **10–40 px** (default = 15). |
-| `max_jump` | Maximum allowed frame-to-frame jump in pixels for lane detection (stability filter). Typical range: **10–60 px** (default = 30). |
+| `min_lane_width` | Rejects contours narrower than this. Typical range: 10–40 px (default = 15). |
+| `max_jump` | Maximum allowed frame-to-frame jump in pixels for lane detection (stability filter). Typical range: 10–60 px (default = 30). |
 | `gaussian_kernel` | Blur kernel before thresholding to reduce noise. Must be odd × odd (e.g., `[7,7]`, `[15,15]`). Default = `[15,15]`. |
 | `block_size` | Window size for adaptive thresholding. Larger values adapt to broader lighting gradients. Must be odd ≥ 3 (default = 25). |
-| `c_const` | Constant subtracted in adaptive thresholding. Shifts threshold up/down. More negative = stricter. Range: **−20 → +20** (default = −8). |
-| `min_contour_area` | Rejects small blobs before aspect-ratio filtering. Typical range: **50–1000 px²** (default = 150). |
-| `min_aspect_ratio` | Height:width filter — keeps long, thin shapes typical of lane paint. Typical range: **2–10** (default = 5.0). |
+| `c_const` | Constant subtracted in adaptive thresholding. Shifts threshold up/down. More negative = stricter. Typical range: −20 → +20 (default = −8). |
+| `min_contour_area` | Rejects small blobs before aspect-ratio filtering. Typical range: 50–1000 px² (default = 150). |
+| `min_aspect_ratio` | Height:width filter — keeps long, thin shapes typical of lane paint. Typical range: 2–10 (default = 5.0). |
 | `morph_kernel` | Structuring element size `[width, height]` used for morphological close/open operations to clean thresholded image. Default = `[10,15]`. |
 
 ---
