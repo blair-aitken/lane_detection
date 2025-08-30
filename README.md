@@ -298,6 +298,31 @@ At the end of processing, the script also prints **summary statistics** in the t
 
 ---
 
+### Limitations
+
+This toolkit is designed for controlled experiments and may not perform perfectly in all conditions. Key limitations to be aware of:
+- Lighting and shadows
+  - Lane detection works best with clearly visible white or yellow lines.
+  - Strong shadows, glare, or faded markings can reduce accuracy.
+- Board calibration
+  - Camera calibration requires sharp, in-focus chessboard images. Blurry or warped boards will degrade results.
+  - Homography calibration must be done with the same camera mount used for the driving video. Any change in angle or height requires recalibration.
+- Vehicle-specific setup
+  - The only configuration parameter that must be changed per vehicle is wheel_offset_cm. An incorrect value will shift the lane-centre measurements.
+- Data quality
+  - The system assumes stable camera mounting. Vibrations or loose mounts can distort results.
+  - NaN values in the CSV indicate frames where no reliable lane line was detected. Manual cleaning of the CSV may be required for final analysis.
+- Scope of use
+  - This toolkit is intended for research use on closed roads or test tracks.
+  - It is not a production-grade driver-assistance system.
+
+---
+
+### Example Data
+A small example dataset is included in `data/example/` so you can test the full pipeline without collecting your own data first.
+
+---
+
 ### Troubleshooting
 
 **Common issues:**
@@ -306,7 +331,7 @@ At the end of processing, the script also prints **summary statistics** in the t
   → Run the calibration step again with `chessboard.png`.  
 
 - **`No homography file exists`**  
-  → Run homography generation with the B1 calibration boards.  
+  → Run homography generation with the calibration boards.  
 
 - **Wheel point mis-clicked**  
   → Rerun measurement and click the correct wheel reference point.  
