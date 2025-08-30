@@ -174,18 +174,6 @@ All other settings can be left as they are unless you want to fine-tune detectio
   "min_contour_area": 150,
   "min_aspect_ratio": 5.0,
   "morph_kernel": [10, 15]
-
-```json
-  "wheel_offset_cm": 91.7,
-  "column_width": 5,
-  "min_lane_width": 15,
-  "max_jump": 30,
-  "gaussian_kernel": [15, 15],
-  "block_size": 25,
-  "c_const": -8,
-  "min_contour_area": 150,
-  "min_aspect_ratio": 5.0,
-  "morph_kernel": [10, 15]
 ```
 
 You may edit values if you want to tune performance (e.g., for different cameras, lighting, or vehicles).
