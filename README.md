@@ -132,6 +132,9 @@ This step tells the software how to convert from video pixels into real-world di
 1. Print two copies of `calibration_board_B1.png` on **B1-sized boards.**
 2. Park your car on a flat road or, ideally, the same test track you’ll use for driving.
 3. Place both boards flat on the ground beside the wheel you’re measuring from (short side against the tyre).
+
+ <img src="https://github.com/user-attachments/assets/c822ab3c-de8f-4d6d-99cc-62d6df6689ac" width="500">
+
 4. Record a 5 second video of the boards with your mounted camera.
 5. Save the video into `data/videos/`
 
