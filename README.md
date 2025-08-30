@@ -115,14 +115,14 @@ Before you can measure lane position, there are two short setup steps:
 
 #### Calibrate Your Camera
 
-Every camera bends the image a little (distortion). Calibration removes this so measurements are accurate.
+We use camera calibration because every camera has its own intrinsic properties (such as focal length and distortion coefficients) that can bend the image. This bending makes straight lines in the real world appear slightly curved. Calibration estimates these properties and corrects the distortion so that measurements taken from the video remain geometrically accurate.
 
 1. Print `chessboard_A4.png` on A4 paper.
 2. Mount flat on stiff cardboard or foam board (no bending).
 3. Take 10–15 photos with your camera. Move the board around the frame, tilt it at different angles, and vary the distance.
 5. Save the photos into `data/chessboard_images/`
 
-Do this once per camera setup. If you change the camera, lens, or resolution, recalibrate.
+<img src="https://github.com/user-attachments/assets/01599bea-576f-4e40-acdd-e667ff1c1d80" width="500">
 
 #### Create a Road Mapping (homography)
 
