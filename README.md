@@ -221,42 +221,36 @@ When you run the launcher, the following steps will run in sequence:
 - This ensures a clean, isolated Python environment regardless of your system setup.
 
 #### Step 2: Camera Calibration
-- Every camera has its own intrinsic properties (focal length, distortion coefficients, etc.).  
-- To account for this, you must run **camera calibration** using the provided `chessboard.png` (A4 print).  
+- Run camera calibration using the printed chessboard pattern.
 - **Input:**
   - At least 10 images of the chessboard pattern at different distances/angles taken with the same camera setup used for driving.
   - Save these images in the `data/chessboard_images` folder.
   - Will accept `*.jpg`, `*.jpeg`, `*.png`, `*.bmp`, `*.tif`, `*.tiff` formats only.
 - **Output:**
-  - `data/calib/camera_intrinsics.npz` containing `camera_matrix` and `dist_coeffs`  
-  - This file is unique to each camera and only needs to be created once per setup.
-
-<img src="https://github.com/user-attachments/assets/01599bea-576f-4e40-acdd-e667ff1c1d80" width="500">
-
-A `camera_intrinsics_summary.json` file is also created, which provides a simple summary of your calibration, including the number of images used, image size, and RMS error.
+  - `data/calib/camera_intrinsics.npz` (camera matrix and distortion coefficients).
+  - `camera_intrinsics_summary.json` (summary of calibration, RMS error, number of images).
 
 <img src="https://github.com/user-attachments/assets/4bcce1f5-a0e3-4e31-850d-7046b59caafa" width="500"><br>
 
 #### Step 3: Compute Homography Matrix
-- Next, you’ll map image pixels to real-world coordinates using the provided **B1 calibration boards** (print two copies of `calibration_board_B1.png`).  
-- Record a short video of the boards placed flat on the road surface with the short side against the wheel of the vehicle and save it in the `data/videos` folder.
-- The script will show the first frame and prompt you to click the 4 corners of the calibration board, **starting with the top-left corner, moving clockwise.**  
+- Run homography generation using the calibration board.
+- **Input:**
+  - Short video (5–10 seconds) of the boards placed flat on the road surface beside the wheel.
+  - Save this video in data/videos/.
 - A homography matrix is computed and saved as `data/homography/[video_name]_homography.json`
+- During this step you will be prompted to click each of the four corners of the calibration board on screen, starting from the top-left corner and moving clockwise.
+  - The pixels you select in the video correspond to the known real-world coordinates of the board (e.g., [0,0] at the top-left corner).
+  - Using these matches, the software computes a homography matrix and saves it as `data/homography/[video_name]_homography.json`
 
 <img src="https://github.com/user-attachments/assets/7578e7fe-4c09-4fa0-8b86-8d2f461ecf7b" width="500">
 
-To confirm the homography transformation worked, a **sanity check** is built into the homography step:
-
-- You select 2 points on the calibration board with a **known distance**.  
-- The script transforms these points into real-world coordinates and calculates the distance.  
-- **Example:**
-  - Each calibration square is **20 cm high × 35 cm wide**.  
-  - Clicking top and bottom corners of a square → should return ~20 cm.  
-  - Clicking across a square → should return ~35 cm.
-
-You will be asked each time whether you want to create a new homography matrix for a video.  
-- You only need **one homography matrix per camera setup**.  
-- However, if the **camera is moved** (angle, height, or position), you must create a **new homography matrix** for that recording.
+- **Sanity check:**
+  - You will also select two points on the calibration board with a known distance.
+  - The script converts these into real-world coordinates and reports the distance.
+  - Example:
+    - Each calibration square is 20 cm high × 35 cm wide.
+    - Clicking top and bottom corners of a square → ~20 cm.
+    - Clicking across a square → ~35 cm.
 
 #### Step 4: Lane Measurement
 - With calibration and homography set, you can now measure lane position from a driving video.  
