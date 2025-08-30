@@ -244,13 +244,15 @@ When you run the launcher, the following steps will run in sequence:
 
 <img src="https://github.com/user-attachments/assets/7578e7fe-4c09-4fa0-8b86-8d2f461ecf7b" width="500">
 
-- **Sanity check:**
-  - You will also select two points on the calibration board with a known distance.
-  - The script converts these into real-world coordinates and reports the distance.
-  - Example:
-    - Each calibration square is 20 cm high × 35 cm wide.
-    - Clicking top and bottom corners of a square → ~20 cm.
-    - Clicking across a square → ~35 cm.
+- **Confirm homography matrix**
+  - After computing the homography matrix, you have the option to run a sanity check.
+  - In this step, you can select any two points on the calibration board in the video. The software will transform these into real-world coordinates and report the measured distance.
+  - This check is important because the point of homography is to ensure that the pixel-to-distance ratio is consistent across the whole frame. I.e., the same distance at the top of the image should equal the same distance at the bottom.
+  - Example with the calibration board:
+    - Each square is 20 cm high × 35 cm wide.
+    - Clicking the top and bottom of a square should return ~20 cm.
+    - Clicking across a square should return ~35 cm.
+    - If the returned values match what you expect, it confirms the homography is working correctly.
 
 #### Step 4: Lane Measurement
 - With calibration and homography set, you can now measure lane position from a driving video.  
