@@ -266,26 +266,24 @@ When you run the launcher, the following steps will run in sequence:
  
 ---
 
-### Outputs
+### Main Outputs (from your driving video)
 
-After running the full pipeline, two types of outputs are created:
+After calibration and homography are set, running the pipeline on your driving video produces two main outputs:
 
 - **CSV file** (`output/csv/[video_name]_measurements.csv`):  
-  Contains frame-by-frame measurements of the vehicle’s lateral position.
-  - Values represent the distance from wheel → lane line, corrected by the wheel-to-vehicle centre offset. 
-  - Each row corresponds to one video frame.
-  - `NaN` indicates no valid lane line was detected for that frame.
+  - Contains frame-by-frame measurements of the vehicle’s lateral position.  
+  - Values represent the distance from wheel → lane line, corrected by the wheel-to-vehicle centre offset.  
+  - `NaN` indicates no valid lane line was detected for that frame.  
 
 - **Debug video** (`output/videos/[video_name]_debug.mp4`):  
-  Shows the wheel reference, detected lane line, frame number, and lateral distance overlayed for visual verification.  
-    - Every frame in the **debug video** is numbered (`Frame 123`) and has the lateral distance overlayed (`187.3 cm`).  
-    - These frame numbers **match the rows in the CSV file** exactly.  
-    - This lets you:
-        - Visually inspect detections.
-        - Identify measurement errors (e.g., overtaking vehicles, shadows).
-        - Manually remove problematic frames from the CSV before final analysis.
+  - Shows the wheel reference point, detected lane line, frame number, and lateral distance.  
+  - Frame numbers in the video **match the rows in the CSV**.  
+  - Useful for:  
+    - Spot-checking detection quality.  
+    - Identifying errors (e.g., shadows, passing vehicles).  
+    - Manually cleaning the CSV before final analysis.  
 
-At the end of processing, the script also prints **summary statistics**.
+At the end of processing, the script also prints **summary statistics** in the terminal.
 
 <img src="https://github.com/user-attachments/assets/eaeb7bb7-ed0f-44f4-b937-7fb5e7468c87" width="500">
 
