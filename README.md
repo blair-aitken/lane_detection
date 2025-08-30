@@ -63,6 +63,8 @@ project-root/
 └── README.md                      # This document
 ```
 
+---
+
 ### Installation
 
 #### 1. Get the code
