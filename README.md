@@ -78,11 +78,13 @@ If you don't have Python 3.9+ installed, follow these instructions.
  ```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
+
 - Install Python:
 
 ```bash
 brew install python
 ```
+
 - Verify installation:
 
 ```bash
@@ -95,13 +97,59 @@ pip3 --version
 - Run the installer
   - During installation, check the box that says `Add Python to PATH`.
   - Choose “Install Now.”
-- To verify, open Command Prompt (search cmd in Start) and run:
+- Verify the installation. Open a new Command Prompt and run:
 
 ```bat
 python --version
 pip --version
 ```
 
+---
+
+### Data Preparation
+
+Before you can measure lane position, there are two short setup steps:
+
+	1.	Calibrate the camera (to remove lens distortion).
+	2.	Generate a homography (to convert video pixels into real-world road distances).
+
+#### Calibrate Your Camera
+
+Every camera bends the image a little (distortion). Calibration removes this so measurements are accurate.
+
+**What to do:**
+- Print `chessboard_A4.png` on A4 paper.
+- Mount flat on stiff cardboard or foam board (no bending).
+- Take 10–15 photos with your camera:
+  - Move the board around the frame (corners, center, edges).
+  - Tilt it at different angles.
+  - Vary the distance (near/far).
+-Save the photos into `data/chessboard_images/`
+
+Do this once per camera setup. If you change the camera, lens, or resolution, recalibrate.
+
+#### Create a Road Mapping (homography)
+
+This step tells the software how to convert from video pixels into real-world distances (cm/meters).
+
+**What to do:**
+- Print two copies of `calibration_board_B1.png` on **B1-sized boards.**
+- Park your car on a flat road or, ideally, the same test track you’ll use for driving.
+- Place both boards flat on the ground beside the wheel you’re measuring from (short side against the tyre).
+- Record a 5 second video of the boards with your mounted camera.
+- Save the video into `data/videos/`
+
+Do this once per camera mounting position. If you move or tilt the camera, you’ll need a new homography.
+
+#### Record Your Driving Video
+
+This is the video the system will analyse for lane position.
+
+What to do:
+- Mount the camera securely above the wheel so the lane line is clearly visible.
+- Record your driving video.
+- Save it into `data/videos/`
+  
 ---
 
 ### Configuration
