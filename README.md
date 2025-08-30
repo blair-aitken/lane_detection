@@ -97,7 +97,7 @@ pip3 --version
 - Run the installer
   - During installation, check the box that says `Add Python to PATH`.
   - Choose “Install Now.”
-- Verify the installation. Open a new Command Prompt and run:
+- Verify installation:
 
 ```bat
 python --version
