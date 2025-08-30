@@ -120,9 +120,10 @@ We use camera calibration because every camera has its own intrinsic properties 
 1. Print `chessboard_A4.png` on A4 paper.
 2. Mount flat on stiff cardboard or foam board (no bending).
 3. Take 10–15 photos with your camera. Move the board around the frame, tilt it at different angles, and vary the distance.
-5. Save the photos into `data/chessboard_images/`
 
 <img src="https://github.com/user-attachments/assets/01599bea-576f-4e40-acdd-e667ff1c1d80" width="500">
+
+4. Save the photos into `data/chessboard_images/`
 
 #### Create a Road Mapping (homography)
 
