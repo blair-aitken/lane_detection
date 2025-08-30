@@ -110,12 +110,12 @@ pip --version
 
 Before you can measure lane position, there are two short setup steps:
 
-- Calibrate the camera (to remove lens distortion).
-- Generate a homography (to convert video pixels into real-world road distances).
+- Take images of the chessboard (to calibrate the camera).
+- Generate a homography video (to convert video pixels into real-world road distances).
 
-#### Calibrate Your Camera
+#### Chessboard Images
 
-We use camera calibration because every camera has its own intrinsic properties (such as focal length and distortion coefficients) that can bend the image. This bending makes straight lines in the real world appear slightly curved. Calibration estimates these properties and corrects the distortion so that measurements taken from the video remain geometrically accurate.
+We use a printed chessboard pattern for camera calibration because it provides a grid of evenly spaced corners that the software can reliably detect. Every camera has its own intrinsic properties (such as focal length and distortion coefficients) that bend the image, making straight lines in the real world appear slightly curved. By capturing the chessboard from different angles and positions, calibration software can estimate these properties and correct the distortion, ensuring that measurements taken from the video are geometrically accurate.
 
 1. Print `chessboard_A4.png` on A4 paper.
 2. Mount flat on stiff cardboard or foam board (no bending).
@@ -125,9 +125,11 @@ We use camera calibration because every camera has its own intrinsic properties 
 
 4. Save the photos into `data/chessboard_images/`
 
-#### Create a Road Mapping (homography)
+#### Homography Video
 
-This step tells the software how to convert from video pixels into real-world distances (cm/meters).
+We use calibration boards on the road to generate a homography, which tells the software how to map video pixels into real-world distances (in cm or meters). The boards provide a known size and shape on the road surface, so the software can “learn” how your specific camera sees the ground plane.
+
+The camera must be mounted in the exact position and angle you’ll use for the driving video. If the camera is moved, tilted, or re-mounted in any way, you must record a new homography video.
 
 1. Print two copies of `calibration_board_B1.png` on **B1-sized boards.**
 2. Park your car on a flat road or, ideally, the same test track you’ll use for driving.
@@ -138,11 +140,9 @@ This step tells the software how to convert from video pixels into real-world di
 4. Record a 5 second video of the boards with your mounted camera.
 5. Save the video into `data/videos/`
 
-Do this once per camera mounting position. If you move or tilt the camera, you’ll need a new homography.
-
 #### Record Your Driving Video
 
-This is the video the system will analyse for lane position.
+This is the video the system will analyse for lane position. It must be recorded with the same camera mount used for calibration and homography.
 
 1. Mount the camera securely above the wheel so the lane line is clearly visible.
 2. Record your driving video.
